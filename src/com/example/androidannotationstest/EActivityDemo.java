@@ -8,22 +8,18 @@ import org.androidannotations.annotations.Receiver;
 import org.androidannotations.annotations.ReceiverAction;
 import org.androidannotations.annotations.ViewById;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 @EActivity(R.layout.activity_main)
-public class MainActivity extends Activity {
+public class EActivityDemo extends Activity {
 	public static final String NAME_KEY = "name_key";
 	public static final String AGE_KEY = "age_key";
-	private String LOG_TAG = "MainActivity";
 
 	@ViewById
 	Button btn_start_sec, btn_test,btn_brocast;
@@ -49,7 +45,7 @@ public class MainActivity extends Activity {
 		case R.id.btn_brocast:
 //			Log.d("MainActivity", "btn_brocast");
 			Intent intent = new Intent("com.mybrocast.receiveraction");    
-            intent.putExtra("name", "Nate");    
+            intent.putExtra("name", "Nate");
             sendBroadcast(intent); 
 			break;
 		}

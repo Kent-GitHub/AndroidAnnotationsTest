@@ -29,8 +29,8 @@ public final class CopyOfSecActivity_
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
-    public final static String NAME_EXTRA = "name_key";
     public final static String AGE_EXTRA = "age_key";
+    public final static String NAME_EXTRA = "name_key";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,11 +85,11 @@ public final class CopyOfSecActivity_
     private void injectExtras_() {
         Bundle extras_ = getIntent().getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey(NAME_EXTRA)) {
-                name = extras_.getString(NAME_EXTRA);
-            }
             if (extras_.containsKey(AGE_EXTRA)) {
                 age = extras_.getInt(AGE_EXTRA);
+            }
+            if (extras_.containsKey(NAME_EXTRA)) {
+                name = extras_.getString(NAME_EXTRA);
             }
         }
     }
@@ -147,12 +147,12 @@ public final class CopyOfSecActivity_
             }
         }
 
-        public CopyOfSecActivity_.IntentBuilder_ name(String name) {
-            return super.extra(NAME_EXTRA, name);
-        }
-
         public CopyOfSecActivity_.IntentBuilder_ age(int age) {
             return super.extra(AGE_EXTRA, age);
+        }
+
+        public CopyOfSecActivity_.IntentBuilder_ name(String name) {
+            return super.extra(NAME_EXTRA, name);
         }
 
     }

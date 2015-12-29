@@ -24,10 +24,10 @@ import android.widget.Toast;
 @EActivity(R.layout.sec_main)
 public class SecActivity extends ParentActy {
 
-	@Extra(MainActivity.NAME_KEY)
+	@Extra(EActivityDemo.NAME_KEY)
 	String name;
 
-	@Extra(MainActivity.AGE_KEY)
+	@Extra(EActivityDemo.AGE_KEY)
 	int age;
 
 	@ViewById(R.id.sec_listView)

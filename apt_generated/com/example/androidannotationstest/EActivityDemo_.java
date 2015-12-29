@@ -27,8 +27,8 @@ import org.androidannotations.api.view.HasViews;
 import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
 
-public final class MainActivity_
-    extends MainActivity
+public final class EActivityDemo_
+    extends EActivityDemo
     implements HasViews, OnViewChangedListener
 {
 
@@ -38,7 +38,7 @@ public final class MainActivity_
 
 
         public void onReceive(Context context, Intent intent) {
-            MainActivity_.this.onAction();
+            EActivityDemo_.this.onAction();
         }
 
     }
@@ -77,16 +77,16 @@ public final class MainActivity_
         onViewChangedNotifier_.notifyViewChanged(this);
     }
 
-    public static MainActivity_.IntentBuilder_ intent(Context context) {
-        return new MainActivity_.IntentBuilder_(context);
+    public static EActivityDemo_.IntentBuilder_ intent(Context context) {
+        return new EActivityDemo_.IntentBuilder_(context);
     }
 
-    public static MainActivity_.IntentBuilder_ intent(android.app.Fragment fragment) {
-        return new MainActivity_.IntentBuilder_(fragment);
+    public static EActivityDemo_.IntentBuilder_ intent(android.app.Fragment fragment) {
+        return new EActivityDemo_.IntentBuilder_(fragment);
     }
 
-    public static MainActivity_.IntentBuilder_ intent(android.support.v4.app.Fragment supportFragment) {
-        return new MainActivity_.IntentBuilder_(supportFragment);
+    public static EActivityDemo_.IntentBuilder_ intent(android.support.v4.app.Fragment supportFragment) {
+        return new EActivityDemo_.IntentBuilder_(supportFragment);
     }
 
     @Override
@@ -100,7 +100,7 @@ public final class MainActivity_
 
                 @Override
                 public void onClick(View view) {
-                    MainActivity_.this.btnTest(view);
+                    EActivityDemo_.this.btnTest(view);
                 }
 
             }
@@ -110,7 +110,7 @@ public final class MainActivity_
 
                 @Override
                 public boolean onLongClick(View view) {
-                    MainActivity_.this.longClick();
+                    EActivityDemo_.this.longClick();
                     return true;
                 }
 
@@ -123,7 +123,7 @@ public final class MainActivity_
 
                 @Override
                 public void onClick(View view) {
-                    MainActivity_.this.btnTest(view);
+                    EActivityDemo_.this.btnTest(view);
                 }
 
             }
@@ -133,7 +133,7 @@ public final class MainActivity_
 
                 @Override
                 public boolean onLongClick(View view) {
-                    MainActivity_.this.longClick();
+                    EActivityDemo_.this.longClick();
                     return true;
                 }
 
@@ -146,7 +146,7 @@ public final class MainActivity_
 
                 @Override
                 public void onClick(View view) {
-                    MainActivity_.this.btnTest(view);
+                    EActivityDemo_.this.btnTest(view);
                 }
 
             }
@@ -162,23 +162,23 @@ public final class MainActivity_
     }
 
     public static class IntentBuilder_
-        extends ActivityIntentBuilder<MainActivity_.IntentBuilder_>
+        extends ActivityIntentBuilder<EActivityDemo_.IntentBuilder_>
     {
 
         private android.app.Fragment fragment_;
         private android.support.v4.app.Fragment fragmentSupport_;
 
         public IntentBuilder_(Context context) {
-            super(context, MainActivity_.class);
+            super(context, EActivityDemo_.class);
         }
 
         public IntentBuilder_(android.app.Fragment fragment) {
-            super(fragment.getActivity(), MainActivity_.class);
+            super(fragment.getActivity(), EActivityDemo_.class);
             fragment_ = fragment;
         }
 
         public IntentBuilder_(android.support.v4.app.Fragment fragment) {
-            super(fragment.getActivity(), MainActivity_.class);
+            super(fragment.getActivity(), EActivityDemo_.class);
             fragmentSupport_ = fragment;
         }
 
